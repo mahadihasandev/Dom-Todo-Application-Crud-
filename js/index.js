@@ -5,16 +5,30 @@ let subBtn=document.querySelector(".subBtn")
 let allPost=document.querySelector(".allPost");
 
 
-
+array=[]
 
 subBtn.addEventListener("click",()=>{
-    array.push({
-        name:name.value,
-        comment:comment.value
-    });
-     
-    allPost.innerHTML=""
-    display()
+if(!name.value||!comment.value){
+  
+  allPost.innerHTML="<h2>write some at both section.</h2>"
+  allPost.style.color="red"
+  
+}else if(name.value.length<3 ||comment.value.length<7 ){
+         allPost.innerHTML="<h2>Name require 3 character comment require 8.</h2>"
+         allPost.style.color="red"
+}
+else{
+  array.push({
+    name:name.value,
+    comment:comment.value
+});
+ 
+allPost.innerHTML=""
+display()
+}
+
+
+ console.log(typeof(name.value))
     
 })
 
