@@ -33,6 +33,8 @@ else{
  
 allPost.innerHTML=""
 display()
+name.value=""
+comment.value=""
 }
 
 
