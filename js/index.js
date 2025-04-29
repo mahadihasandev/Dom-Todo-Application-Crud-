@@ -4,7 +4,7 @@ let comment= document.querySelector(".comment");
 let subBtn=document.querySelector(".subBtn")
 let allPost=document.querySelector(".allPost");
 
-
+let array=[];
 
 
 subBtn.addEventListener("click",()=>{
