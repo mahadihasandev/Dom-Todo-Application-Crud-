@@ -10,12 +10,20 @@ let array=[];
 subBtn.addEventListener("click",()=>{
 if(!name.value||!comment.value){
   
-  allPost.innerHTML="<h2>write some at both section.</h2>"
-  allPost.style.color="red"
+  allPost.innerHTML=`<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title text-danger">Please Write something in both section.</h5>
+  </div>
+</div>`
+  
   
 }else if(name.value.length<3 ||comment.value.length<7 ){
-         allPost.innerHTML="<h2>Name require 3 character comment require 8.</h2>"
-         allPost.style.color="red"
+         allPost.innerHTML=`<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title text-danger">Name have to be at least 3 & comment 7.</h5>
+  </div>
+</div>`
+         
 }
 else{
   array.push({
