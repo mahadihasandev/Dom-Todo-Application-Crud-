@@ -5,7 +5,7 @@ let subBtn=document.querySelector(".subBtn")
 let allPost=document.querySelector(".allPost");
 
 
-array=[]
+
 
 subBtn.addEventListener("click",()=>{
 if(!name.value||!comment.value){
