@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./css/style.css">
+    
     <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     <nav class="navbar bg-body-tertiary">
@@ -16,19 +17,24 @@
         </div>
       </nav>
     <div class="container">
-        <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Name</label>
+        <div class="w-50 mx-auto text-center">
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label fw-bold">Name</label>
             <input type="text" class="form-control bg-dark-subtle name" id="exampleFormControlInput1" placeholder="name">
           </div>
           <div class="mb-3">
-            <label for="exampleFormControlTextarea1" class="form-label" >Comment</label>
+            <label for="exampleFormControlTextarea1" class="form-label fw-bold" >Comment</label>
             <textarea class="form-control bg-dark-subtle comment" id="exampleFormControlTextarea1" rows="3" placeholder="comment"></textarea>
           </div>
 
           <button type="button" class="btn btn-info mb-3 subBtn">Submit</button>
           <button type="button" class="btn btn-info mb-3 updateBtn">Update</button>
+          <div class="error d-flex flex-wrap column-gap-5"></div>
+        </div>
 
+          
           <div class="allPost d-flex flex-wrap column-gap-5"></div>
+         
 
     </div>
     <script src="./js/index.js"></script>

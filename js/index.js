@@ -4,6 +4,7 @@ let comment= document.querySelector(".comment");
 let subBtn=document.querySelector(".subBtn")
 let allPost=document.querySelector(".allPost");
 let updateBtn =document.querySelector(".updateBtn");
+let error=document.querySelector(".error");
 
 let indexEdit;
 let array=[];
@@ -13,13 +14,13 @@ updateBtn.style.display="none";
 subBtn.addEventListener("click",()=>{
 if(!name.value||!comment.value){
   
-  allPost.innerHTML=`<div class="card shadow" style="width: 18rem;">
+  error.innerHTML=`<div class="card shadow" style="width: 18rem;">
   <div class="card-body">
     <h5 class="card-title text-danger">Please Write something in both section.</h5>
   </div>
 </div>`
 }else if(name.value.length<3 ||comment.value.length<7 ){
-         allPost.innerHTML=`<div class="card shadow" style="width: 18rem;">
+         error.innerHTML=`<div class="card shadow" style="width: 18rem;">
   <div class="card-body">
     <h5 class="card-title text-danger">Name have to be at least 3 & comment 7.</h5>
   </div>
@@ -27,13 +28,14 @@ if(!name.value||!comment.value){
          
 }
 else{
+  
   array.push({
     name:name.value,
     comment:comment.value
 });
  
-
-allPost.innerHTML=""
+error.innerHTML="";
+allPost.innerHTML="";
 display();
 name.value="";
 comment.value="";
@@ -44,7 +46,6 @@ comment.value="";
 updateBtn.addEventListener("click",()=>{
   array[indexEdit].name=name.value;
   array[indexEdit].comment=comment.value;
-  
   allPost.innerHTML="";
   display();
   updateBtn.style.display="none";
