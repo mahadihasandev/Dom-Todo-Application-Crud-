@@ -50,7 +50,7 @@ updateBtn.addEventListener("click",()=>{
   display();
   updateBtn.style.display="none";
   subBtn.style.display="block";
-
+  error.innerHTML="";
   name.value="";
   comment.value="";
 });
