@@ -50,7 +50,7 @@ updateBtn.addEventListener("click",()=>{
   display();
   updateBtn.style.display="none";
   subBtn.style.display="block";
-  error.innerHTML="";
+ 
   name.value="";
   comment.value="";
 });
@@ -78,6 +78,7 @@ function display(){
             name.value=array[index].name;
             comment.value=array[index].comment;
             indexEdit=index;
+            error.innerHTML="";
             updateBtn.style.display="block";
             subBtn.style.display="none";
           });
